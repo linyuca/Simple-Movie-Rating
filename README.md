@@ -23,22 +23,24 @@ $ export MY_KEY="abcd"
 
 $ docker run -e MY_KEY=$MY_KEY --rm --name my-running-one my-image 'Toy story'
 
-"Toy story" Invalid API key!
+	"Toy story" Invalid API key!
 
 $ export MY_KEY="5394c9bc"
 
 $ docker run -e MY_KEY=$MY_KEY --rm --name my-running-one my-image 'Toy story'
 
-"Toy story" Rotten Tomatoes rating is: 100%
+	"Toy story" Rotten Tomatoes rating is: 100%
 
 $ docker run -e MY_KEY=$MY_KEY --rm --name my-running-one my-image 'not Toy story'
 
-"not Toy story" Movie not found!
+	"not Toy story" Movie not found!
 
 $ docker run -e MY_KEY=$MY_KEY --rm --name my-running-one my-image 'Yesterday'
+
 	"Yesterday" don't have 'Rotten Tomatoes' rating, but it has 'Internet Movie Database' value which is: 9.2/10
 
 $ docker run -e MY_KEY=$MY_KEY --rm --name my-running-one my-image 'Annabelle Comes Home'
+
 	"Annabelle Comes Home" have no Ratings available
 
 
